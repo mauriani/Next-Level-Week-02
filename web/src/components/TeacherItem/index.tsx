@@ -18,6 +18,7 @@ interface TeacherItemProps {
 }
 
 const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+  console.log(teacher);
   return (
     <article className="teacher-item">
       <header>
