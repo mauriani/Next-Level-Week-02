@@ -5,16 +5,26 @@ import Input from "../../components/Input";
 import Select from "../../components/Select";
 import TeacherItem from "../../components/TeacherItem";
 import "./styles.css";
+import api from "../../services/api";
 
 const TeacherList: React.FC = () => {
   const [subject, setSubject] = useState("");
   const [week_day, setWeekDay] = useState("");
   const [time, setTime] = useState("");
 
-  function searchTeachers(e: FormEvent) {
+  async function searchTeachers(e: FormEvent) {
     e.preventDefault();
-
-    console.log("a");
+    try {
+      const response = await api.get("/classes", {
+        params: {
+          subject,
+          week_day,
+          time,
+        },
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (
