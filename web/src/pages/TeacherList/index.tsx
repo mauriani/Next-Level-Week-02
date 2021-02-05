@@ -3,28 +3,27 @@ import React, { FormEvent, useState } from "react";
 import PageHeader from "../../components/PageHeader";
 import Input from "../../components/Input";
 import Select from "../../components/Select";
-import TeacherItem from "../../components/TeacherItem";
+import TeacherItem, { Teacher } from "../../components/TeacherItem";
 import "./styles.css";
 import api from "../../services/api";
 
 const TeacherList: React.FC = () => {
+  const [teachers, setTeachers] = useState([]);
   const [subject, setSubject] = useState("");
   const [week_day, setWeekDay] = useState("");
   const [time, setTime] = useState("");
 
   async function searchTeachers(e: FormEvent) {
     e.preventDefault();
-    try {
-      const response = await api.get("/classes", {
-        params: {
-          subject,
-          week_day,
-          time,
-        },
-      });
-    } catch (err) {
-      console.log(err);
-    }
+
+    const response = await api.get("/classes", {
+      params: {
+        subject,
+        week_day,
+        time,
+      },
+    });
+    setTeachers(response.data);
   }
 
   return (
@@ -84,8 +83,8 @@ const TeacherList: React.FC = () => {
               },
 
               {
-                value: "Química",
-                label: "Química",
+                value: "Quimíca",
+                label: "Quimíca",
               },
             ]}
           />
@@ -148,7 +147,9 @@ const TeacherList: React.FC = () => {
       </PageHeader>
 
       <main>
-        <TeacherItem />
+        {teachers.map((teacher: Teacher) => {
+          return <TeacherItem key={teacher.id} teacher={teacher} />;
+        })}
       </main>
     </div>
   );
