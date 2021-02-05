@@ -56,25 +56,25 @@
   display: block;
 }
 
-.teacher-item footer button {
+.teacher-item footer a {
   width: 20rem;
   height: 5.6rem;
   background: var(--color-secundary);
-
+  color: var(--color-button-text);
   border: 0;
   border-radius: 0.8rem;
   cursor: pointer;
   font: 700 1.4rem Archivo;
-  color: var(--color-button-text);
-
   display: flex;
   align-items: center;
+  text-decoration: none;
   justify-content: space-evenly; /*,esmo espaçamento distríbuido na direita, esquerda e centro*/
   transition: 0.2s ease-in-out;
 }
 
 .teacher-item footer button:hover {
   background: var(--color-secundary-dark);
+  text-decoration: none;
 }
 
 @media (min-width: 700px) {
