@@ -45,7 +45,6 @@ export default class ClassesController {
   async create(request: Request, response: Response) {
     const {
       name,
-      email,
       avatar,
       whatsapp,
       bio,
@@ -60,7 +59,6 @@ export default class ClassesController {
       // Inserindo o usuário no banco
       const insertedUsersIds = await trx("users").insert({
         name,
-        email,
         avatar,
         whatsapp,
         bio,
