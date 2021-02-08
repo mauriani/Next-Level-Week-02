@@ -15,13 +15,7 @@ const Favorites: React.FC = () => {
           paddingHorizontal: 16,
           paddingBottom: 16,
         }}
-      >
-        <TeacherItem />
-        <TeacherItem />
-        <TeacherItem />
-        <TeacherItem />
-        <TeacherItem />
-      </ScrollView>
+      ></ScrollView>
     </View>
   );
 };
