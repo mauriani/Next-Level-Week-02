@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# NLW-02-Proffy
-=======
 # Next Level Week-02-Proffy
 
 ### Sobre o Projeto
@@ -128,4 +125,4 @@ yarn create react-app nome-da-aplicacao --template typescript
 ```
 
 Esse projeto foi desenvolvido com o conceito de responsividade, onde a nossa aplicação não perde tanto do layout no mobile.
->>>>>>> 7e4bdbe049405863465895cc83592391e00402e8
+
