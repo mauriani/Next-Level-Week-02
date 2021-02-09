@@ -158,5 +158,5 @@ yarn start
 
 <img src="https://user-images.githubusercontent.com/32397288/107422398-b91cb780-6af9-11eb-93f7-f5f3b5b834da.jpg" width="150"> | 
 <img src="https://user-images.githubusercontent.com/32397288/107422429-c5087980-6af9-11eb-988c-4a4d9bf570d2.jpg" width="150"> | 
-<img src=(https://user-images.githubusercontent.com/32397288/107422430-c5a11000-6af9-11eb-88bb-abb9b15a5c5a.jpg" width="150"> | 
+<img src="https://user-images.githubusercontent.com/32397288/107422430-c5a11000-6af9-11eb-88bb-abb9b15a5c5a.jpg" width="150"> | 
 <img src="https://user-images.githubusercontent.com/32397288/107422434-c639a680-6af9-11eb-8ccf-37be70b0fd9a.jpg" width="150">
