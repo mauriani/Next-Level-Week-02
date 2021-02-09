@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     marginTop: 4,
     marginBottom: 16,
+    color: "#c1bccc",
   },
   inputGroup: {
     flexDirection: "row",
