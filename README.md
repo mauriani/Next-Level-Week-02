@@ -1,4 +1,4 @@
-##Next Level Week-02-Proffy
+## Next Level Week-02-Proffy
 
 ### Sobre o Projeto
 O projeto que realizamos durante essa semana chama-se **proffy,** ele é uma plataforma que ajuda aos usuários a teram conexões, o aluno pode estudar com um professor e conectar com o mesmo via whatsapp.
