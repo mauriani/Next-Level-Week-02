@@ -140,6 +140,8 @@ cd (nome do projeto)
 yarn start
 ```
 
+<img src="https://user-images.githubusercontent.com/32397288/107423512-2a109f00-6afb-11eb-8797-e47363120f4d.png">
+
 ### Iniciando o Projeto Mobile - Expo
 
 Para criar o nosso projeto temos que colar o comando abaixo no terminal, mas caso não tenha o expo instalado lembre-se de instalar primeiramente em sua máquina.
