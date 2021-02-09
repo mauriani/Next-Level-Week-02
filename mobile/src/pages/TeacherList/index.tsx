@@ -6,6 +6,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import PageHeader from "../../components/PageHeader";
 import TeacherItem, { Teacher } from "../../components/TeacherItem";
+import Information from "../../components/Information";
 
 import api from "../../services/api";
 
@@ -119,15 +120,13 @@ function TeacherList() {
           paddingBottom: 16,
         }}
       >
-        {teachers.map((teacher: Teacher) => {
-          return (
-            <TeacherItem
-              key={teacher.id}
-              teacher={teacher}
-              favorited={favorites.includes(teacher.id)}
-            />
-          );
-        })}
+        {teachers.length >= 1 ? (
+          teachers.map((teacher: Teacher) => {
+            return <TeacherItem key={teacher.id} teacher={teacher} favorited />;
+          })
+        ) : (
+          <Information title="Para fazer uma nova conexão pressione o icone." />
+        )}
       </ScrollView>
     </View>
   );

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { View, ScrollView } from "react-native";
+import { View, ScrollView, Text } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import Information from "../../components/Information";
 
 import PageHeader from "../../components/PageHeader";
 import TeacherItem, { Teacher } from "../../components/TeacherItem";
@@ -24,6 +25,8 @@ const Favorites: React.FC = () => {
     loadFavorites();
   });
 
+  console.log(favorites);
+
   return (
     <View style={styles.container}>
       <PageHeader title="Meus Proffys favoritos" />
@@ -35,9 +38,13 @@ const Favorites: React.FC = () => {
           paddingBottom: 16,
         }}
       >
-        {favorites.map((teacher: Teacher) => {
-          return <TeacherItem teacher={teacher} favorited={true} />;
-        })}
+        {favorites.length >= 1 ? (
+          favorites.map((teacher: Teacher) => {
+            return <TeacherItem key={teacher.id} teacher={teacher} favorited />;
+          })
+        ) : (
+          <Information title="Você não tem nenhum Proffy favorito ainda ☹️" />
+        )}
       </ScrollView>
     </View>
   );
